@@ -20,36 +20,45 @@
                 <span class="material-symbols-outlined">
                     menu
                     </span>
-                <nav class="flex" id="navMenu">
-                    <a href="">Home</a>
-                    <a href="">Empresa</a>
-                    <a href="">Produtos</a>
-                    <a href="">Contato</a>
-                </nav>
+                
             </div>
+            <nav class="flex" id="navMenu">
+                <a href="">Catálogo</a>
+                <a href="">Motores</a>
+                <a href="">Motobombas</a>
+                <a href="">Categoria Ex</a>
+                <a href="">WEG</a>
+                <a href="" id="mais">MAIS</a>
+            </nav>
         </div>
-        <p class="headerrodape">sei la</p>
+        <p class="headerrodape"> </p>
        
     </header>
 
 
     <main onclick="sair()">
+        <div class="bemvindo flex"  onmouseenter="hideWeg()">
+            <h1>Bem Vindo<br> Na <strong>Louro Eletromotores</strong> a prioridade é a sua empresa</h1>          
+        </div> 
         <div class="titulo">
             <h2>NOSSOS VALORES</h2>
         </div>
         <div class="flex valores">
-            <img src="imagens/estrela.png" alt="">
+           
             <div class="texto">
+                <img src="imagens/estrela.png" alt="">
                 <h3>Conveniência</h3>
                 <p>Em Louro Eletromotroes procuramos ao máximo minimizar a burocracia existente em tantas outras empresas do mesmo ramo</p>
             </div>
-            <img src="imagens/alvo.png" alt="">
-            <div class="texto">
+          
+            <div class="texto">  
+                <img src="imagens/alvo.png" alt="">
                 <h3>Qualidade</h3>
                 <p>Além da facilidade você terá os melhores produtos e serviços existentes no mercado.</p>
             </div>
-            <img src="imagens/verificado.png" alt="">
+            
             <div class="texto">
+                <img src="imagens/verificado.png" alt="">
                 <h3>Localização</h3>
                 <p>Temos filiais em Recife e Belo Jardim, o que nos dá maior possibilidade para melhor lhe atender.
                 </p>
@@ -59,28 +68,38 @@
         <div class="titulo">
             <h2>NOSSOS FORNECEDORES</h2>
         </div>
-        <div class="">
+        <div class=""  onmouseenter="hideWeg()">
             <h3>Os melhores produtos</h3>
             <p>Trabalhamos exclusivamente com fornecedores de confiança e produtos de qualidade, para fornecer o melhor serviço ao ciente e melhor manutenção dos seus motores</p>
         </div>        
         <div class="cartazEx gradient flex">
             
-            <div class="imagem flex" >
-                <img src="imagens/Selo-peca-originais-2.png" alt="">
+            <div class="imagem flex"  onmouseenter="linkWeg()" >
+                <picture>
+                    <source media="(max-width: 501px)" srcset="imagens/Selo-peca-originais-2.png" type="image/png">
+                    <img src="imagens/wegBranco.png" alt="">
+                </picture>
+                <h2>PEÇAS <br> ORIGINAIS</h2>
                 <a href="https://www.weg.net" rel="external" target="_blank" id="wegLink">conheça a Weg</a>
             </div>
 
-            <div class="pweg flex ">
+            <div class="pweg flex " onmouseenter="hideWeg()">
                 <p>CONFIRA NOSSO CATÁLOGO <strong>WEG</strong></p>
                 <button class="botao" id="produtosWeg">Clique aqui</button>
             </div>
         </div>
-        <div class="bemvindo flex">
-            <h1>Bem Vindo<br> Na <strong>Louro Eletromotores</strong> a prioridade é a sua empresa</h1>          
-        </div>
+
     </main>
     <footer>
+        <p>Siga-nos</p>
+        <div class="redes flex">
+            <a href="" rel="external" target="_blank"><img src="redesSociais/facebook.png" alt="facebook"></a>
+            <a href="" rel="external" target="_blank"><img src="redesSociais/instagram.png" alt="instagram"></a>
+            <a href="" rel="external" target="_blank"><img src="redesSociais/Twitter.png" alt="twitter"></a>
+            <a href="" rel="external" target="_blank"><img src="redesSociais/Whatsapp2.png" alt="whatsapp"></a>
+        </div>
         <p>Soloncy Moura 2023 Todos os direitos reservados &copy;</p>
+
     </footer>
     <script src="script/script.js"></script>
 </body>

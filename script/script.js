@@ -20,13 +20,20 @@ function clickMenu()  {
     }
     
 };
+
+/*
 function sair(){
     menu.style.background = 'var(--azullouro)'
     navMenu.style.visibility = 'hidden'
     navMenu.style.width = '0%'
     a = 'off'
 };
+*/
+
 //aparecer link da weg (apenas mouse enter na div imagem quando desktop)
 function linkWeg(){
     document.getElementById('wegLink').style.display = 'block';
+}
+function hideWeg(){
+    document.getElementById('wegLink').style.display = 'none';
 }
