@@ -4,18 +4,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="icone/favicon.ico" type="image/x-icon">
+    <!-- Provisório -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- ^^^^ -->
+    <link rel="stylesheet" href="style/resetcss.css">
     <link rel="stylesheet" href="style/estilo.css">
     <title>Louro Eletromotores | Home</title>
 </head>
 <body>
-    <header>
-
+    <header >
+        <div class="flex cabecalho ">
+            <img src="imagens/Logo-branco.png" alt="logo.svg">
+            <div class="flex menu" id="menu" onclick="clickMenu()">
+                <span class="material-symbols-outlined">
+                    menu
+                    </span>
+                <nav class="flex" id="navMenu">
+                    <a href="">Home</a>
+                    <a href="">Empresa</a>
+                    <a href="">Produtos</a>
+                    <a href="">Contato</a>
+                </nav>
+            </div>
+        </div>
+        <p class="headerrodape">sei la</p>
+       
     </header>
-    <main>
 
+
+    <main onclick="sair()">
+        <div class="titulo">
+            <h2>NOSSOS VALORES</h2>
+        </div>
+        <div class="flex valores">
+            <img src="imagens/estrela.png" alt="">
+            <div class="texto">
+                <h3>Conveniência</h3>
+                <p>Em Louro Eletromotroes procuramos ao máximo minimizar a burocracia existente em tantas outras empresas do mesmo ramo</p>
+            </div>
+            <img src="imagens/alvo.png" alt="">
+            <div class="texto">
+                <h3>Qualidade</h3>
+                <p>Além da facilidade você terá os melhores produtos e serviços existentes no mercado.</p>
+            </div>
+            <img src="imagens/verificado.png" alt="">
+            <div class="texto">
+                <h3>Localização</h3>
+                <p>Temos filiais em Recife e Belo Jardim, o que nos dá maior possibilidade para melhor lhe atender.
+                </p>
+            </div>
+
+        </div>    
+        <div class="titulo">
+            <h2>NOSSOS FORNECEDORES</h2>
+        </div>
+        <div class="">
+            <h3>Os melhores produtos</h3>
+            <p>Trabalhamos exclusivamente com fornecedores de confiança e produtos de qualidade, para fornecer o melhor serviço ao ciente e melhor manutenção dos seus motores</p>
+        </div>        
+        <div class="cartazEx gradient flex">
+            
+            <div class="imagem flex" >
+                <img src="imagens/Selo-peca-originais-2.png" alt="">
+                <a href="https://www.weg.net" rel="external" target="_blank" id="wegLink">conheça a Weg</a>
+            </div>
+
+            <div class="pweg flex ">
+                <p>CONFIRA NOSSO CATÁLOGO <strong>WEG</strong></p>
+                <button class="botao" id="produtosWeg">Clique aqui</button>
+            </div>
+        </div>
+        <div class="bemvindo flex">
+            <h1>Bem Vindo<br> Na <strong>Louro Eletromotores</strong> a prioridade é a sua empresa</h1>          
+        </div>
     </main>
     <footer>
-
+        <p>Soloncy Moura 2023 Todos os direitos reservados &copy;</p>
     </footer>
     <script src="script/script.js"></script>
 </body>
