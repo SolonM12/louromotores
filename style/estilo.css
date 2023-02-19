@@ -1,4 +1,4 @@
-
+@charset "UTF-8";
 :root{
     --azulweg: #28b8d9;
     --azullouro: #03378a;
@@ -24,17 +24,20 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
     background-color: var(--azullouro);
 
 }
 .cabecalho{
     justify-content: space-between;
 }
+
 .cabecalho img{
     width: 100%;
     width: 50%;
     padding: 10px;
 }
+
 .menu{
     transition: .3s;
     background-color: var(--azullouro);
@@ -63,6 +66,7 @@ nav{
     transition: .3s;
 
 }
+
 nav>a{
     transition: .1;
     padding: 10px 0px;
@@ -71,9 +75,11 @@ nav>a{
     text-decoration: none;
     color: white;
 }
+
  #mais{
     background-color: #9b9ca3e8;
- }
+}
+
 .headerrodape{
     margin: 0;
     text-align: center;
@@ -81,6 +87,7 @@ nav>a{
     background-color: var(--azulweg);
     height: 15px;
 }
+
 main{
     box-shadow: 0px 0px 5px 2px #00000042;
     margin: auto;
@@ -89,6 +96,28 @@ main{
     height: auto;
     background-color: #fff;
 }
+
+.bemvindo{
+    height: 300px;
+    background-image: url('../imagens/background1.png');
+    background-size: 130%;
+    background-position: center;
+    font-size: .8em;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 1px 10px 0px #0000009a;
+}
+.sombratopo{
+    box-shadow: 0px -1px 10px 0px #0000009a;
+}
+h1{
+    background-color: #b6b7bdd3;
+    color: var(--azullouro);
+    font: normal 400 2em arial;
+}
+
 .titulo{
     padding: 1px 0px;
     text-align: center;
@@ -107,13 +136,37 @@ main{
     text-align: center;
 
 }
+
 .valores>img{
     width: 40%;
     margin: auto;
 }
+
 .texto{
-    font: normal 400 .7em arial;
+    font: normal 400 1em arial;
     width: 50%;
+}
+.alinhamento{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fornecedores{
+    margin: 50px 20px;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+}
+
+.fornecedores>img{
+    width:25%;
+}
+
+
+.fornecedorestxt{
+    width: 70%;
+    text-align: center;
 }
 
 .cartazEx{
@@ -145,6 +198,7 @@ main{
     color: white;
 
 }
+
 .imagem>h2{
     display: none;
 }
@@ -175,23 +229,98 @@ main{
     width: 150px;
 }
 
-
-.bemvindo{
-    height: 300px;
-    background-image: url('../imagens/background1.png');
-    background-size: 130%;
-    background-position: center;
-    font-size: .8em;
-    font-weight: 600;
+.contato{
+    height: 50vh;
+    position: relative;
+    padding: 20px 0px;
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 1px 1px 2px 1px #0000006c;
+    color: white;
 }
 
-h1{
-    background-color: #b6b7bdd3;
-    color: var(--azullouro);
+.contato>h2{
+    background-color: var(--cinzaweg);
+    margin: -20px 0px;
+    font: normal 100 1.5em arial;
+    padding: 20px 0px;
+    
+}
+
+.mapa{
+    margin: 25px 0px 25px 50px;
+    width: 40%;
+    height: 80%;
+}
+iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.formulario{
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    height: 75%;
+    width: 30%;
+    float: right;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form{
+    background-color: var(--cinzaweg);
+    box-shadow: -1px -1px 5px 0px var(--azulweg) ;
+    border-radius: 3px;
+    margin: auto;
+    width: 50%;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top:0;
+    
+}
+
+.caixatxt, .caixatxt input{
+    width: 90%;
+    border: 1px dashed black ;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+}
+
+.caixatxt>input{
+    padding: 30px auto;
+}
+.enviar{
+    background-color: var(--cinzaweg);
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 15%;
+    width: 50%;
+}
+#telefones{
+    margin: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 2px;
+    border: 1px dashed ;
+    text-align: left;
+    color: black;
+}
+.whatsapp{
+    width: 50px;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+.whatsapp img{
+    width: 100%;
+    border-radius: 50%;
+
 }
 
 footer{
@@ -200,25 +329,33 @@ footer{
     position: static;
     bottom: 0px;
 }
+
 footer>p{
     color: #fff;
     text-align: center;
     font-weight: 800 ;
     font-size: .5em;
 }
+
 .redes{
     justify-content: space-around;
     margin: auto;
     padding-left: 15.15px;
     width: 50%;
 }
+
 .redes img{
     border-radius: 50%;
     width: 60%;
 }
-@media screen and (min-width: 501px) {
+
+@media screen and (min-width: 870px) {
+    
     body{
         background-color: var(--azulweg);
+    }
+    .alturadiv{
+        height: 500px;
     }
     header{
         height: 80px;
@@ -256,9 +393,19 @@ footer>p{
         display: none;
     }
     main{
+        box-shadow: none;
         height: 100%;
         margin: 70px auto 0px auto;
-        width: 99%;
+        width:100%;
+    }    
+    .bemvindo{
+        margin: 100px 0px 0px 0px;
+        background-image: url('../imagens/wallpaperAzul.jpg');
+        background-attachment: fixed;
+        background-position: top;
+        background-size: cover;
+        box-shadow: inset ;
+
     }
     .titulo{
         background-color: var(--azulweg);
@@ -267,12 +414,19 @@ footer>p{
     .valores{
         width: 100%;
         flex-direction: row;
-
-        margin: 100px auto;
     }
     .texto{
         width: 20%;
         margin: 0px 50px;
+    }
+
+    .fornecedores{
+        margin: -100px 0 0 0;
+
+    }
+    .fornecedorestxt{
+        width: 70%;
+        margin: -150px auto 50px auto;
     }
 
     .cartazEx{
@@ -302,12 +456,11 @@ footer>p{
         align-items: center;
     }
 
-    .bemvindo{
-        margin: 100px 0px 0px 0px;
-        height: 450px;
-        background-image: url('../imagens/wallpaperAzul.jpg');
-        background-position: top;
-        background-size: cover;
+    .botao:hover{
+
+        font-weight: 600;
+        cursor: pointer;
+        background-color: #03378a3b;
 
     }
 

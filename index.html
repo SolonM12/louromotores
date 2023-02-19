@@ -37,13 +37,13 @@
 
 
     <main onclick="sair()">
-        <div class="bemvindo flex"  onmouseenter="hideWeg()">
+        <div class="bemvindo flex alturadiv"  onmouseenter="hideWeg()">
             <h1>Bem Vindo<br> Na <strong>Louro Eletromotores</strong> a prioridade é a sua empresa</h1>          
         </div> 
-        <div class="titulo">
+        <div class="titulo sombratopo">
             <h2>NOSSOS VALORES</h2>
         </div>
-        <div class="flex valores">
+        <div class="flex valores alturadiv">
            
             <div class="texto">
                 <img src="imagens/estrela.png" alt="">
@@ -68,15 +68,23 @@
         <div class="titulo">
             <h2>NOSSOS FORNECEDORES</h2>
         </div>
-        <div class=""  onmouseenter="hideWeg()">
-            <h3>Os melhores produtos</h3>
-            <p>Trabalhamos exclusivamente com fornecedores de confiança e produtos de qualidade, para fornecer o melhor serviço ao ciente e melhor manutenção dos seus motores</p>
-        </div>        
+        <div class="alinhamento flex">
+            <div class="fornecedores flex alturadiv"  onmouseenter="hideWeg()">
+                <img src="imagens/weg.png" alt="">
+                <img src="imagens/schneider.png" alt="">
+                <img src="imagens/skf_logo.webp" alt="">
+            </div>
+            <div class="fornecedorestxt">
+                <h3>Os melhores produtos</h3>
+                <p>Trabalhamos exclusivamente com fornecedores de confiança e produtos de qualidade, para fornecer o melhor serviço ao cliente e melhor manutenção dos seus motores e motobombas.</p>
+            </div>
+        </div>
+        
         <div class="cartazEx gradient flex">
             
             <div class="imagem flex"  onmouseenter="linkWeg()" >
                 <picture>
-                    <source media="(max-width: 501px)" srcset="imagens/Selo-peca-originais-2.png" type="image/png">
+                    <source media="(max-width: 870px)" srcset="imagens/Selo-peca-originais-2.png" type="image/png">
                     <img src="imagens/wegBranco.png" alt="">
                 </picture>
                 <h2>PEÇAS <br> ORIGINAIS</h2>
@@ -88,7 +96,33 @@
                 <button class="botao" id="produtosWeg">Clique aqui</button>
             </div>
         </div>
-
+        <div class="contato alturadiv borda">
+            <h2>CONTATO</h2>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.862062170958!2d-34.911766585887584!3d-8.115524283453821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1e530ad1aaab%3A0x17d1a6396d1c4a40!2sLouro%20Eletromotores!5e0!3m2!1spt-BR!2sbr!4v1676762551684!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="formulario flex borda">
+                <form action="" class= "flex  gradient">
+                    <div class="caixatxt">
+                        <label for="nome">Nome</label>
+                        <input class="entrada" type="text" id="nome" name="nome" placeholder="Seu Nome">
+                    </div>
+                    <div class="caixatxt">
+                        <label for="email">Email</label>
+                        <input class="entrada" type="email" id="email" name="email" placeholder="Seu E-mail">
+                    </div>
+                    <div class="caixatxt">
+                        <label for="nome">Seu nome</label>
+                        <input class="entrada" type="password" id="nome" name="nome">
+                    </div>
+                    <button class="enviar">enviar</button>      
+                </form>
+                <p id="telefones">(81) 3726-2674 - Belo Jardim<br>(81) 3048-2053 - Recife</p>
+                <div class="whatsapp borda">
+                        <a href=""><img src="redesSociais/Whatsapp2.png" alt=""></a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <p>Siga-nos</p>
