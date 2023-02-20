@@ -230,38 +230,99 @@ h1{
 }
 
 .contato{
-    height: 50vh;
-    position: relative;
-    padding: 20px 0px;
+    flex-direction: column;
+    height:900px;
     text-align: center;
     color: white;
 }
-
-.contato>h2{
+.contato p{
+    text-align: left;
+    color: #000;
+}
+.contatoesq{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contatodir{
+    justify-content: space-around;
+    display: flex;
+    flex-direction:column-reverse;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+h2.cinza{
+    text-align: center;
     background-color: var(--cinzaweg);
     margin: -20px 0px;
-    font: normal 100 1.5em arial;
+    font: normal bold 1.5em arial;
     padding: 20px 0px;
-    
+
 }
 
 .mapa{
-    margin: 25px 0px 25px 50px;
-    width: 40%;
-    height: 80%;
+    position: relative;
+    margin: 50px auto 0px auto;
+    /* width: 40%; */
+    width: 250px;
+    /* height: 80%; */
+    height: 250px;
 }
+
 iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
 }
 
+#mapaRecife{
+    display: none;
+    z-index: 5;
+}
+
+#mapaBelojardim{
+    display: none;
+    z-index: 10;
+}
+
+.enderecos{
+    margin: auto;
+    width: fit-content;
+    align-items: center;
+}
+
+.caixaselecao{
+    font:normal normal .8em arial;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 20px;
+    margin: 20px 0px;
+}
+#marcadorRec{
+    background-color: white;
+}
+#marcadorBj{
+    background-color: white;
+}
+.marcador{
+
+    margin: 0px 10px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+    border-radius: 50%;    
+    transition: .5s;
+}
+
 .formulario{
-    position: absolute;
-    top: 25%;
-    right: 5%;
-    height: 75%;
-    width: 30%;
-    float: right;
+    /* position: absolute; */
+    margin-top: 50px;
+    width: 80%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -270,21 +331,17 @@ iframe{
 form{
     background-color: var(--cinzaweg);
     box-shadow: -1px -1px 5px 0px var(--azulweg) ;
-    border-radius: 3px;
     margin: auto;
     width: 50%;
     height: 80%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    position: absolute;
-    top:0;
-    
+    /* position: absolute; */
 }
 
 .caixatxt, .caixatxt input{
     width: 90%;
-    border: 1px dashed black ;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -302,20 +359,23 @@ form{
     height: 15%;
     width: 50%;
 }
+.informacoes{
+    font: normal bold 1em arial;
+    margin: auto;
+    width: 90%;
+}
+
 #telefones{
-    margin: 0;
-    position: absolute;
-    bottom: 10px;
-    left: 2px;
-    border: 1px dashed ;
+    float: left;
+    width: 70%;
+    margin: 12.5px 0px;
     text-align: left;
     color: black;
 }
 .whatsapp{
+    margin-right: 50px;
+    float: right;
     width: 50px;
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
 }
 .whatsapp img{
     width: 100%;
@@ -463,7 +523,42 @@ footer>p{
         background-color: #03378a3b;
 
     }
+    .contato{
+        /* position: relative; */
+        height: 600px;
+        flex-direction: row;
+    }
 
+    .mapa{
+        margin: 50px;
+        float: left;
+        width:540px;
+        height: 360px;
+    }
+    .informacoes{
+        /* position: absolute; */
+        right: 115px;
+        bottom: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 200px;
+        width: 100%;
+
+    }
+    .whatsapp{
+        float: right;
+    }
+    #telefones{
+        width: fit-content;
+    }
+    .formulario{
+        height: 300px;
+        width: 300px;
+    }
+    .enderecos{
+        margin-left: 50px;
+    }
     footer{
         margin: 0px;
         padding: 0px;

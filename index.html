@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="icone/favicon.ico" type="image/x-icon">
-    <!-- Provisório -->
+    <!-- Provisório!!! Link de Simbolos-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <!-- ^^^^ -->
     <link rel="stylesheet" href="style/resetcss.css">
@@ -43,7 +43,7 @@
         <div class="titulo sombratopo">
             <h2>NOSSOS VALORES</h2>
         </div>
-        <div class="flex valores alturadiv">
+        <div class="valores flex alturadiv">
            
             <div class="texto">
                 <img src="imagens/estrela.png" alt="">
@@ -93,33 +93,55 @@
 
             <div class="pweg flex " onmouseenter="hideWeg()">
                 <p>CONFIRA NOSSO CATÁLOGO <strong>WEG</strong></p>
-                <button class="botao" id="produtosWeg">Clique aqui</button>
+                <button class="botao" id="produtosWeg" onclick="teste()">Clique aqui</button>
             </div>
         </div>
-        <div class="contato alturadiv borda">
-            <h2>CONTATO</h2>
-            <div class="mapa">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.862062170958!2d-34.911766585887584!3d-8.115524283453821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1e530ad1aaab%3A0x17d1a6396d1c4a40!2sLouro%20Eletromotores!5e0!3m2!1spt-BR!2sbr!4v1676762551684!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2 class="cinza">CONTATO</h2>
+        <div class="contato flex alturadiv">
+    <!-- Sessão Contato -->
+ 
+            <!-- Mapas -->
+            <div class="contatoesq ">
+                <div class="mapa">
+                    <iframe class="recife" id="mapaRecife" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.862062170958!2d-34.911766585887584!3d-8.115524283453821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1e530ad1aaab%3A0x17d1a6396d1c4a40!2sLouro%20Eletromotores!5e0!3m2!1spt-BR!2sbr!4v1676762551684!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe class="belojardim" id="mapaBelojardim" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7895.297920704116!2d-36.43437354609377!3d-8.337634099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a9c6234f2b058d%3A0x54b3bd9d2b4f7195!2sLOURO%20ELETROMOTORES!5e0!3m2!1spt-BR!2sbr!4v1676819392466!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                        <!-- Endereço -->
+                <div class="enderecos ">
+                
+                    <div class="caixaselecao flex " onclick="toggleMapaR()"><div class="marcador" id="marcadorRec"></div><p>Recife - Rua Prof. Pedro Augusto Carneiro Leão, 383</p></div>
+                    <div class="caixaselecao flex " onclick="toggleMapaBj()"><div class="marcador" id="marcadorBj"></div><p>Belo Jardim - Rua Tenente Cleto Campelo, 236</p></div>
+                </div>
             </div>
-            <div class="formulario flex borda">
-                <form action="" class= "flex  gradient">
-                    <div class="caixatxt">
-                        <label for="nome">Nome</label>
-                        <input class="entrada" type="text" id="nome" name="nome" placeholder="Seu Nome">
-                    </div>
-                    <div class="caixatxt">
-                        <label for="email">Email</label>
-                        <input class="entrada" type="email" id="email" name="email" placeholder="Seu E-mail">
-                    </div>
-                    <div class="caixatxt">
-                        <label for="nome">Seu nome</label>
-                        <input class="entrada" type="password" id="nome" name="nome">
-                    </div>
-                    <button class="enviar">enviar</button>      
-                </form>
-                <p id="telefones">(81) 3726-2674 - Belo Jardim<br>(81) 3048-2053 - Recife</p>
-                <div class="whatsapp borda">
-                        <a href=""><img src="redesSociais/Whatsapp2.png" alt=""></a>
+        <!-- informações -->
+            <div class="contatodir">
+                <div class="informacoes  ">
+                    <p>
+                        Email:
+                        <a href="">vendas@louroeletromotores.com.br</a>
+                    </p>
+                    <p id="telefones">(81) 3726-2674 - Belo Jardim<br>(81) 3048-2053 - Recife</p>
+                    <div class="whatsapp">
+                            <a href=""><img src="redesSociais/Whatsapp2.png" alt=""></a>
+                </div>
+                </div>
+                <div class="formulario flex ">
+                    <form action="" class= "flex gradient ">
+                        <div class="caixatxt">
+                            <label for="nome">Nome</label>
+                            <input class="entrada" type="text" id="nome" name="nome" placeholder="Seu Nome">
+                        </div>
+                        <div class="caixatxt">
+                            <label for="email">Email</label>
+                            <input class="entrada" type="email" id="email" name="email" placeholder="Seu E-mail">
+                        </div>
+                        <div class="caixatxt">
+                            <label for="nome">Seu nome</label>
+                            <input class="entrada" type="password" id="nome" name="nome">
+                        </div>
+                        <button class="enviar">enviar</button>
+                    </form>
+                    <!-- -->
                 </div>
             </div>
         </div>
@@ -130,7 +152,7 @@
             <a href="" rel="external" target="_blank"><img src="redesSociais/facebook.png" alt="facebook"></a>
             <a href="" rel="external" target="_blank"><img src="redesSociais/instagram.png" alt="instagram"></a>
             <a href="" rel="external" target="_blank"><img src="redesSociais/Twitter.png" alt="twitter"></a>
-            <a href="" rel="external" target="_blank"><img src="redesSociais/Whatsapp2.png" alt="whatsapp"></a>
+            <a href="" rel="external" target="_blank"><img src="redesSociais/Whatsapp.png" alt="whatsapp"></a>
         </div>
         <p>Soloncy Moura 2023 Todos os direitos reservados &copy;</p>
 
