@@ -15,7 +15,7 @@
 <body>
     <header >
         <div class="flex cabecalho ">
-            <img src="imagens/Logo-branco.png" alt="logo.svg">
+            <img src="imagens/Logo-branco.png" alt="logo.svg" title="Página inicial">
             <div class="flex menu" id="menu" onclick="clickMenu()">
                 <span class="material-symbols-outlined">
                     menu
@@ -35,8 +35,7 @@
        
     </header>
 
-
-    <main onclick="sair()">
+    <main>
         <div class="bemvindo flex alturadiv"  onmouseenter="hideWeg()">
             <h1>Bem Vindo<br> Na <strong>Louro Eletromotores</strong> a prioridade é a sua empresa</h1>          
         </div> 
@@ -121,8 +120,8 @@
                         <a href="">vendas@louroeletromotores.com.br</a>
                     </p>
                     <p id="telefones">(81) 3726-2674 - Belo Jardim<br>(81) 3048-2053 - Recife</p>
-                    <div class="whatsapp">
-                            <a href=""><img src="redesSociais/Whatsapp2.png" alt=""></a>
+                    <div class="whatsapp" onclick="whatsapp()">
+                            <img src="redesSociais/Whatsapp2.png" alt="" >
                 </div>
                 </div>
                 <div class="formulario flex ">
@@ -137,7 +136,7 @@
                         </div>
                         <div class="caixatxt">
                             <label for="nome">Seu nome</label>
-                            <input class="entrada" type="password" id="nome" name="nome">
+                            <input class="entrada" type="password" id="senha" name="nome">
                         </div>
                         <button class="enviar">enviar</button>
                     </form>
@@ -157,6 +156,25 @@
         <p>Soloncy Moura 2023 Todos os direitos reservados &copy;</p>
 
     </footer>
+    <!--POP UP -->
+    <div class="fundotranslucido" onclick="sair()">    
+    </div>
+        <!--Whatsapp-->
+        <div class="linkzap flex">
+            <div class="fechar" onclick="sair()">
+                <span class="material-symbols-outlined">
+                    close
+                    </span>
+            </div>
+            <h2>Whatsapp</h2>
+            <button class="botao">
+                <a href="">Belo Jardim: +55 81 91234-1234</a>
+            </button>
+            <button class="botao">
+                <a href="">Recife: +55 81 91234-1234</a>
+            </button>
+        </div>
+
     <script src="script/script.js"></script>
 </body>
 </html>

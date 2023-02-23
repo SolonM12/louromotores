@@ -1,77 +1,86 @@
+/* ALGUNS BUGS PARA CORRIGIR:
+1.
+Quando você ta na versão mobile, ativa o menu e desativa novamente, ao voltar para a versão desktop o navmenu fica todo cagado!!! 
+(sugestão de correção: Definir uma classe diferente para a mudança de estilo ao invés de fazer na classe principal.)
+(colocar uma condicional para quando a tela for  maior que o breakpoint)
 
+*/
+
+//variavel do fundo translucido
+var fundo = document.querySelector('.fundotranslucido');
+var zap = document.querySelector('.linkzap');
 // variáveis do menu
-var menu = document.getElementById('menu');
-var navMenu = document.getElementById('navMenu');
-var a = 'off';
-
-//ideia do mapa
-//passo 1
-//cliclar num objeto e ele fazer um mapa aparecer (feito)
-//fazer o marcador mudar sua cor quando o mapa aparecer (feito)
-//fazer a mesma coisa com o mapa de belo jardim (feito)
-//fazer com que quando marque um, desmarque o outro
-
-
-
+let menu = document.getElementById('menu');
+let navMenu = document.getElementById('navMenu');
+let a = 'off';
 
 //variaveis mapa Recife
-var mapaRecife = document.getElementById('mapaRecife');
-var marcadorRec = document.getElementById('marcadorRec')
+let mapaRecife = document.getElementById('mapaRecife');
+let marcadorRec = document.getElementById('marcadorRec');
 //variaveis mapa Belo Jardim
-var mapaBelojardim = document.getElementById('mapaBelojardim');
-var marcadorBj = document.getElementById('marcadorBj')
+let mapaBelojardim = document.getElementById('mapaBelojardim');
+let marcadorBj = document.getElementById('marcadorBj');
 
+//Botão Whatsapp
+function whatsapp(){
+    fundo.style.zIndex = '10'
+    zap.style.visibility = 'visible'
+    fundo.style.visibility = 'visible'
 
+}
 
 //por padão recife ligado
-mapaRecife.style.display = 'block'
-marcadorRec.style.background = 'var(--azulweg)'
+mapaRecife.style.display = 'block';
+marcadorRec.style.background = 'var(--azulweg)';
 //mapa de Belo Jardim
 function toggleMapaBj(){
     //Tirando o mapa de Recife
-    mapaRecife.style.display = 'none'
-    marcadorRec.style.background = 'white'
+    mapaRecife.style.display = 'none';
+    marcadorRec.style.background = 'white';
 
     //Adicionando o mapa de Belo Jardim
-    mapaBelojardim.style.display = 'block'
-    marcadorBj.style.background = 'var(--azulweg)'
+    mapaBelojardim.style.display = 'block';
+    marcadorBj.style.background = 'var(--azulweg)';
 }
 
 //mapa de recife
 function toggleMapaR(){
     //tirando o mapa de Belo Jardim
-    mapaBelojardim.style.display = 'none'
-    marcadorBj.style.background = 'white'
+    mapaBelojardim.style.display = 'none';
+    marcadorBj.style.background = 'white';
     //adicionadno o mapa de recife
-    mapaRecife.style.display = 'block'
-    marcadorRec.style.background = 'var(--azulweg)'
+    mapaRecife.style.display = 'block';
+    marcadorRec.style.background = 'var(--azulweg)';
 }
 
 // animação do menu
 function clickMenu()  {
     if (a == 'off'){
-    menu.style.background = 'var(--azulweg)'
-    navMenu.style.visibility = 'visible'
-    navMenu.style.width = '65%'
-    a = 'on'
+    menu.style.background = 'var(--azulweg)';
+    navMenu.style.visibility = 'visible';
+    navMenu.style.width = '65%';
+    fundo.style.visibility = 'visible';
+    a = 'on';
 }
     else {
-        menu.style.background = 'var(--azullouro)'
-        navMenu.style.visibility = 'hidden'
-        navMenu.style.width = '0%'
-        a = 'off'
+        menu.style.background = 'var(--azullouro)';
+        navMenu.style.visibility = 'hidden';
+        navMenu.style.width = '0%';
+        fundo.style.visibility = 'hidden';
+        a = 'off';
     }
     
 };
-
-/*
+//função sair do menu
 function sair(){
-    menu.style.background = 'var(--azullouro)'
-    navMenu.style.visibility = 'hidden'
-    navMenu.style.width = '0%'
-    a = 'off'
+    fundo.style.zIndex = '5';
+    menu.style.background = 'var(--azullouro)';
+    navMenu.style.visibility = 'hidden';
+    navMenu.style.width = '0%';
+    a = 'off';
+    fundo.style.visibility = 'hidden';
+    zap.style.visibility = 'hidden';
 };
-*/
 
 //aparecer link da weg (apenas mouse enter na div imagem quando desktop)
 function linkWeg(){
